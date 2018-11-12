@@ -1,0 +1,26 @@
+<nav class="columns is-mobile is-dark navbar is-fixed-top">
+  <div class="column is-2-desktop logo">
+    <%= image_tag "logo.png" %>
+  </div>
+
+  <div class="column menu-button">
+    <% if user_signed_in? %>
+      <div class="dropdown is-hoverable is-pulled-right is-right">
+        <div class="dropdown-trigger">
+          <a class="icon is-large" aria-haspopup="true" aria-controls="dropdown-menu">
+            <i class="fas fa-cog fa-2x has-text-white-bis"></i>
+          </a>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <%= link_to "Profile", edit_user_registration_path, class: "dropdown-item" %>
+            <hr class="dropdown-divider">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <%= link_to "ENTRAR", new_user_session_path, class: "button is-pulled-right is-outlined is-white" %>          
+    <% end %>
+  </div>
+</nav>
