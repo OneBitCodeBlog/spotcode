@@ -1,4 +1,6 @@
 <div class="column is-half-mobile is-one-quarter-desktop">
-  <%= image_tag url_for(artist.photo) %>
-  <p class="is-size-6 has-text-weight-semibold"><%= artist.name %></p>
+  <%= link_to artist, class: "has-text-white" do %>  
+    <%= image_tag url_for(artist.photo) %>
+    <p class="is-size-6 has-text-weight-semibold"><%= artist.name %></p>
+  <% end %>
 </div>

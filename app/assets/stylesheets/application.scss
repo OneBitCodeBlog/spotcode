@@ -1,3 +1,7 @@
 @import "bulma/bulma";
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./**/*";
+
+html{
+  background-color: $dark;
+}
