@@ -1,0 +1,24 @@
+<section class="section has-text-white has-text-centered">
+  <h2 class="is-size-5 has-text-weight-light">Buscar</h2>
+  <br />
+  <div class="field">
+    <%= form_with url: searches_path, method: :get, local: true do |f| %>
+      <p class="control has-icons-right">
+        <%= f.text_field :search, class: "input is-medium", type: "text", placeholder: "Álbuns, Artistas ou Músicas" %>
+        <span class="icon is-small is-right">
+          <i class="fas fa-search"></i>
+        </span>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="columns is-multiline is-mobile">
+    <% Category.all.each do |category| %>
+      <div class="column is-half-mobile is-one-quarter-desktop">
+        <%= link_to "" do %>  
+          <%= image_tag url_for(category.image) %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<div class="tabs is-medium is-centered shared">
+  <ul>
+    <% if albums %>
+      <li class="is-active">
+        <a target="#albums">Álbums</a>
+      </li>
+    <% end %>
+
+    <% if artists %>
+      <li>
+        <a target="#artists">Artistas</a>
+      </li>
+    <% end %>
+
+    <% if songs %>
+      <li>
+        <a target="#songs">Músicas</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="tabs-content">
+  <% if albums %>
+    <div id="albums" class="tab-item active">
+      <div class="columns is-mobile is-multiline">
+        <%= render albums %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if artists %>
+    <div id="artists" class="tab-item">
+      <div class="columns is-mobile is-multiline">
+        <%= render artists %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if songs %>
+    <div id="songs" class="tab-item">
+      <div class="columns is-multiline">
+        <div class="column is-12">
+          <button id="play-all" class="button is-primary is-medium">
+            <span class="icon"><i class="fas fa-play-circle"></i></span>
+            <span>Tocar Todas</span>
+          </button>
+        </div>
+        <%= render songs %>
+      </div>
+    </div>
+  <% end %>
+</div>

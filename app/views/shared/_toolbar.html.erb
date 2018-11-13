@@ -1,13 +1,13 @@
 <% if user_signed_in? %>  
   <nav class="columns is-mobile is-dark navbar is-fixed-bottom toolbar">
     <div class="column has-text-centered">
-      <%= link_to "", class: "has-text-white" do %>
+      <%= link_to authenticated_root_path, class: "has-text-white" do %>
         <i class="fa fa-home fa-lg"></i>
       <% end %>
     </div>
 
     <div class="column has-text-centered">
-      <%= link_to "", class: "has-text-white" do %>
+      <%= link_to new_search_path, class: "has-text-white" do %>
         <i class="fa fa-search fa-lg"></i>
       <% end %>
     </div>
