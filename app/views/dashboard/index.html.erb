@@ -1,0 +1,17 @@
+<section class="section has-text-white has-text-centered dashboard">
+  <div class="albums">
+    <h2 class="is-size-5">Tocadas Recentemente</h1>
+    <div class="columns is-multiline is-mobile">
+      <%= render @recent_albums %>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="albums">
+    <h2 class="is-size-5">Recomendadas</h1>
+    <div class="columns is-multiline is-mobile">
+      <%= render @recommended_albums %>
+    </div>
+  </div>
+</section>
