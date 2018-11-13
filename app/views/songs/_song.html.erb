@@ -1,11 +1,11 @@
 <div class="column is-full has-text-left song-item">
   <div class="columns is-mobile">    
-    <div class="column is-3-mobile is-1-desktop">
+    <div class="column is-2-mobile is-1-desktop play-button">
       <%= link_to "", class: "has-text-white" do %>
-        <i class="fas fa-play-circle fa-3x"></i>
+        <i class="fas fa-play-circle fa-2x"></i>
       <% end %>
     </div>
-    <div class="is-7">
+    <div class="column">
       <h2 class="is-size-5"><%= song.title %></h2>
       <p><%= song.album.artist.name %></p>
     </div>

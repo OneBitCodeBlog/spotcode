@@ -1,0 +1,15 @@
+div.song-item {
+  border-top: 1px solid $white;
+  
+  div.play-button {
+    margin-top: 12px;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &.playing {
+    color: $primary;
+  }
+}
