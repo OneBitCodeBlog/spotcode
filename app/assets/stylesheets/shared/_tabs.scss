@@ -20,5 +20,9 @@ div.tabs-content {
     &.active {
       display: block;
     }
+
+    button#play-all{
+      margin-bottom: 15px;
+    }
   }
 }
