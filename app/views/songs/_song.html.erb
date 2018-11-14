@@ -9,5 +9,8 @@
       <h2 class="is-size-5"><%= song.title %></h2>
       <p><%= song.album.artist.name %></p>
     </div>
+    <div class="column is-2-mobile is-1-desktop is-pulled-right favorite">
+      <%= favorite_button(song) %>
+    </div>
   </div>
 </div>

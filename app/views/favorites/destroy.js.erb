@@ -1,0 +1,7 @@
+link_filter = "a[data-kind='<%= @favoritable.favoritable_type %>'][data-id='<%= @favoritable.favoritable_id %>']";
+
+$(`${link_filter}`).attr('data-method', 'post');
+
+$(`${link_filter} i`)
+    .removeClass('fas')
+    .addClass('far');
